@@ -1,0 +1,360 @@
+body{
+  font-family:Courier New,monospace;
+  font-size:16;
+}
+#hero{
+  width:202;
+  /*background-color:#EEE;*/
+  /*display:none;*/
+  position:absolute;
+  overflow:hidden;
+  left:5;
+  top:550;
+}
+
+.hp_line{
+  background-color:rgb(0,153,0);
+  border:1px solid rgb(0,102,0);
+  height:5;
+  font-size:0;
+}
+.mp_line{
+  background-color:rgb(0,153,255);
+  border:1px solid rgb(0,0,102);
+  height:5;
+  font-size:0;
+}
+
+
+#enemy{
+  width:202;
+  /*background-color:#EEE;*/
+  /*display:none;*/
+  position:absolute;
+  overflow:hidden;
+  top:550;
+  left:593;
+}
+#log{
+  width:405;
+  height:400;
+  background-color:#EEE;
+  position:absolute;
+  top:0;
+  overflow:scroll;
+  font-size:12;
+  display:none;
+}
+#log b.ok{
+  color: green;
+}
+#log i{
+  color: gray;
+}
+
+#log b.not{
+  color: red;
+}
+
+#log b.info{
+  color: purple;
+}
+
+.hp{
+  color:rgb(0,255,0);
+  font-weight:bold;
+}
+.mp{
+  color:rgb(0,0,255);
+  font-weight:bold;
+}
+.elem{
+  color:gray;
+  font-weight:bold;
+}
+
+#action1{
+  position:absolute;
+  top:510;
+}
+
+#action2{
+  position:absolute;
+  top:510;
+  left:80;
+}
+
+#clear{
+  position:absolute;
+  top:510;
+  left:150;
+}
+
+#hero_image{
+  position:absolute;
+  /*top:300;
+  left:50;*/
+}
+
+#support_image{
+  position:absolute;
+  top:250;
+  left:150;
+}
+
+#hero_image img{
+  cursor: hand; 
+  position:absolute;
+}
+
+#enemy_image{
+  position:absolute;
+  /*top:300;
+  left:550;*/
+}
+
+#enemy_image img{
+  position:absolute;
+}
+
+#action_image{
+  position:absolute;
+}
+
+#action_image2{
+  position:absolute;
+}
+
+#damage_index{
+  position:absolute;
+}
+
+.heal{
+  font-weight:bold;
+  font-size:32;
+  color:green;
+}
+
+.damage{
+  font-weight:bold;
+  font-size:32;
+  color:red;
+}
+
+#messages{
+  position:absolute;
+  color:white;
+  font-size:72;
+  font-weight:bold;
+}
+
+#backg{
+  position:absolute;
+  width:800;
+  height:600;
+  /*background: URL('../../public/image/bg/stones.png');*/
+}
+
+#backg-flora{
+  position:absolute;
+}
+
+#frontg-flora{
+  position:absolute;
+}
+
+#console_h{
+  position:absolute;
+  top:0;
+  width:800;
+}
+
+#console{
+  position:absolute;
+  width:800;
+  height:18;
+  font-size:12;
+  font-family:Courier New;
+  border: 0;
+  background: #CCC;
+  color: blue;
+}
+
+#baloon {
+  position:absolute;
+  background: #fff;
+  width:250;
+}
+
+.confirm_btn{
+  background-color: #CCC;
+  border: none;
+  width:64;
+  height:23;
+  color:#555;
+  font:bold 16px Arial;
+  background-image: url('../image/interface/button.gif');
+}
+
+#baloon_name{
+  font:bold 16px Arial;
+  text-indent:5;
+  padding-top:5px;
+  text-transform: capitalize;
+}
+
+#baloon_message{
+  font:14px Arial;
+  padding:5px;
+  color:#333;
+  text-align: justify;
+}
+
+#baloon_confirm{
+  text-align:right;
+  padding: 2px;
+}
+
+#baloon_message i{
+  color: rgb(0,204,255);
+}
+.hero_image{
+  border-width:2px;
+  border-color:white;
+  border-style:solid;
+  cursor:hand;
+}
+.hero_image:hover{
+  border-width:2px;
+  border-color:rgb(97,121,204);
+  border-style:solid;
+}
+
+#hero_description{
+  font-size:24px;
+  font-family:arial;
+  color:white;
+}
+
+#hero_description h1{
+  font-size:36px;
+  font-family:arial;
+  font-weight:bold;
+  color:white;
+}
+
+.startmenu_btn{
+  border-width:0;
+  width:250;
+  text-align:left;
+  background:transparent;
+  font-family:Arial;
+  font-size:24px;
+  font-weight:bold;
+  color:white;
+  cursor:hand;
+}
+
+#actionlist{
+  font-family:Arial;
+  font-size:20px;
+  background-color:#FFF;
+  color:#000;
+  left:0;
+  top:200;
+  width:800;
+}
+
+#actionlistcontainer div{
+  padding-left:5px;
+  padding-right:5px;  
+  cursor:hand;
+}
+
+#actionlistcontainer div:hover{
+  background-color:#EEE;
+}
+
+
+.actenabled{
+  color:rgb(0,100,200);
+  /*background-color:#FFF;*/
+  background-image: url('../image/interface/orb.gif');
+  background-repeat: no-repeat;
+  text-indent:0px;
+}
+
+.actenabled input{
+  font-family:Arial;
+  font-size:24px;
+  background-color:#FFF;
+  color:rgb(0,100,200);
+  background:transparent;
+  border: none;
+  width:300px;
+  text-align:center;
+  cursor:hand;
+}
+
+/*.actenabled .switchbtn{
+  background-image: url('../image/interface/ar_l.gif');
+  background:transparent;
+  background-repeat: no-repeat;
+  width:20px;
+  margin-left:20px;
+}*/
+
+.actdisabled{
+  color:gray;
+  background-color:#DDD;
+  background-image: url('../image/interface/orb_gray.gif');
+  background-repeat: no-repeat;
+  text-indent:0px;
+}
+
+.actdisabled input{
+  font-family:Arial;
+  font-size:24px;
+  background-color:#FFF;
+  color:gray;
+  background:transparent;
+  border: none;
+  width:300px;
+  text-align:center;
+  cursor:hand;
+}
+
+#loading{
+  position:absolute;
+  top:290;
+  left:320;
+}
+
+#loading #loadtext{
+  position:absolute;
+  white-space: nowrap;
+  font-family:Arial;
+  font-size:18px;
+  color:#CCC;
+  margin-top:4px;
+}
+
+#staff{
+  position:absolute;
+  font-size:18px;
+  font-family:Arial;
+  color:#FFF;
+  white-space: nowrap;
+}
+
+#staff b{
+  font-size:24px;
+}
+
+#staff h1{
+  font-size:48px;
+  font-weight: bold;
+}
+
+
+

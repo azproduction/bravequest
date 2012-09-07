@@ -1,0 +1,65 @@
+<!--!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"-->
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+    <title>Brave Quest &mdash; Priority Action Script Game&nbsp;</title>
+    <link rel="stylesheet" href="public/style/default.css" type="text/css" />
+    <link rel="stylesheet" href="public/style/main.css" type="text/css" />
+    <script src="public/library/lib/prototype.js" type="text/javascript"></script>
+    <script src="public/library/src/scriptaculous.js" type="text/javascript"></script>
+    <script src="public/script/objects.js" type="text/javascript" charset="windows-1251"></script>
+    <script src="public/script/main.js" type="text/javascript" charset="windows-1251"></script>
+  </head>
+  <body onload="show_all_params();" onkeydown="catch_button(event);">
+    <div id="scene">
+      <div id="backg">&nbsp;</div>
+      <div id="backg-flora"></div>
+      <div id="log"></div>
+      <div id="hero_image" onClick="turn();"></div>
+      <div id="support_image"></div>
+      <div id="enemy_image"></div>
+      <div id="action_image"></div>
+      <div id="action_image2"></div>
+      <div id="damage_index"></div>
+      <div id="frontg-flora"></div>
+    </div>
+    <div id="console_h" style="display:none;">
+      <input type="text" id="console" value="" onkeyup="catch_button2(event,this.value);" />
+    </div>
+    <div id="hero" style="display:none">
+      <span id="hero_hp" class="hp"></span>
+      <div id="hero_hp_line" class="hp_line"></div>
+      <span id="hero_mp" class="mp"></span>
+      <div id="hero_mp_line" class="mp_line"></div>
+    </div>
+    <div id="enemy" style="display:none">
+      <span id="enemy_hp" class="hp" ></span>
+      <div id="enemy_hp_line" class="hp_line"></div>
+      <span id="enemy_mp" class="mp" ></span>
+      <div id="enemy_mp_line" class="mp_line"></div>
+    </div>
+    <div id="baloon" style="display:none;">
+      <div id="baloon_name"></div>
+      <div id="baloon_message"></div>
+      <div id="baloon_confirm">
+        <input type="button" id="baloon_confirm_btn" class="confirm_btn" onClick="dialog_confirm();show_line(currentStoryLineID);" value="OK"/>
+      </div>
+    </div>
+    <div id="actionlist" style="display:none;position:absolute;">
+      <div style="padding:5px;font-size:16px;font-weight:bold"></div>
+      <div id="actionlistcontainer">
+        
+      </div>
+      <div style="text-align:right;padding:5px;">
+        <!--dialog_confirm();show_line(currentStoryLineID);-->
+        <input type="button" id="actionlist_confirm_btn" class="confirm_btn" onClick="actionlist_confirm();show_line(currentStoryLineID);" value="OK"/>
+      </div>
+    </div>
+    <div id="loading"><img src="public/image/interface/loading.gif"><span id="loadtext">Loading...</span></div>
+  </body>
+  <script type="text/javascript" charset="windows-1251">
+    //-- FINALIZATION --------------------------------------------------------------
+    preload();
+    window.onload = function(){$('loading').innerHTML='&nbsp;';opening();}
+  </script>
+</html>
